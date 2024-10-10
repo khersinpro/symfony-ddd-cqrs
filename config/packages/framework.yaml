@@ -9,6 +9,12 @@ framework:
     #esi: true
     #fragments: true
 
+    serializer:
+        enabled: true
+        mapping:
+            paths:
+                - '%kernel.project_dir%/src/User/Infrastructure/Mapping/Serializer'
+
 when@test:
     framework:
         test: true

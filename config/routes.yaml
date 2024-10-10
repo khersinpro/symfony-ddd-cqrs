@@ -1,5 +1,20 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
+users:
+    resource: '../src/User/Infrastructure/Controller'
     type: attribute
+
+articles:
+    resource: '../src/Blog/Article/Infrastructure/Controller'
+    type: attribute
+
+categories:
+    resource: '../src/Blog/Category/Infrastructure/Controller'
+    type: attribute
+
+api_login_check:
+    path: /api/login_check
+    methods: POST
+
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
